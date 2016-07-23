@@ -13,9 +13,11 @@
 ActiveRecord::Schema.define(version: 20160723102815) do
 
   create_table "microposts", force: :cascade do |t|
-    t.text    "content"
-    t.integer "user_id"
-    t.string  "picture"
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "picture"
   end
 
   create_table "relationships", force: :cascade do |t|
